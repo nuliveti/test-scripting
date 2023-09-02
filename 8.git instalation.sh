@@ -10,7 +10,7 @@ if [ $USERID -ne 0 ]
 
 then
     echo "ERROR: please run this script as root user"
-    exit 1
+  
 fi
 
 yum install mysqllll -y
