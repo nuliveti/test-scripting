@@ -9,16 +9,16 @@
 
 
 USERID=$(id -u)
-VALIDATE(){
-
-
 # this function should validate the previous command nd inform user it is success or failure.
+
+VALIDATE(){
+ #$1----it will receive the argument
 if [ $1 -ne 0 ]
 then
-   echo "installation ........FAILURE"
+   echo "$2 ........FAILURE"
    exit 1
 else
-   echo "installation .......SUCCESS"
+   echo "$2 .......SUCCESS"
 
    fi
 }
@@ -26,12 +26,12 @@ if [ $USERID -ne 0 ]
 
 then
     echo "ERROR: please run this script as root user"
-   
+   exit 1
 fi
 ### its our responsible again to check weather installation success or fail
 yum install mysql -y
-VALIDATE $?
+VALIDATE $? "installing MYSQL"
 
    yum install postfix -y
 
-VALIDATE $?
+VALIDATE $? "installing postfix"
