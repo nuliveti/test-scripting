@@ -10,8 +10,8 @@
 
 USERID=$(id -u)
 VALIDATE(){
-    
-}
+
+
 # this function should validate the previous command nd inform user it is success or failure.
 if [ $1 -ne 0 ]
 then
@@ -21,7 +21,7 @@ else
    echo "installation .......SUCCESS"
 
    fi
-
+}
 if [ $USERID -ne 0 ]
 
 then
