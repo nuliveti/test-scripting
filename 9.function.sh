@@ -10,7 +10,7 @@
 
 USERID=$(id -u)
 VALIDATE(){
-    #$1 >>>>>it will receive the argument1
+    
 }
 # this function should validate the previous command nd inform user it is success or failure.
 if [ $1 -ne 0 ]
