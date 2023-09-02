@@ -12,6 +12,7 @@ then
     echo "ERROR: please run this script as root user"
    
 fi
+### its our responsible again to check weather installation success or fail
 
 yum install mysql -y
 
