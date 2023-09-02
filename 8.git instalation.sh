@@ -10,7 +10,7 @@ if [ $USERID -ne 0 ]
 
 then
     echo "ERROR: please run this script as root user"
-    exit 1
+   
 fi
 
 yum install mysql -y
@@ -35,7 +35,7 @@ else
 
    fi
 
-   
+
 ### its our responsible again to check weather installation success or fail
 ####EXIT STATUS: by default shell script can't understand the previous status weather successs or failure.
 #####so we can append exit status to the script to exit if its fails and proceed to next step if its success
