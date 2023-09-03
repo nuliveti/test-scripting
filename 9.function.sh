@@ -1,37 +1,36 @@
 #!/bin/bash
-
-# function:
-# you will keep some code inside functions which is more often repeated, and call whenever you require
-
-# function will do some work on behalf of us and it will update what happend
-
-### we need to give inputs to the function and function will give us output.
-
+#this script gola is to install mysql
+# if its have root then proceed else fail.or exist.
 
 USERID=$(id -u)
-# this function should validate the previous command nd inform user it is success or failure.
-
+##this function should validate previous command and inform user weather success or failure
 VALIDATE(){
- #$1----it will receive the argument
-if [ $1 -ne 0 ]
+    #here it will receive the argument1
+    if [ $1 -ne 0 ]
 then
-   echo "$2 ........FAILURE"
-   exit 1
+    echo "Installation ---- FAILURE"
+    exit 1
 else
-   echo "$2 .......SUCCESS"
-
-   fi
-}
-if [ $USERID -ne 0 ]
-
-then
-    echo "ERROR: please run this script as root user"
-   exit 1
+    echo "Installation ---- SUCCESS"
 fi
-### its our responsible again to check weather installation success or fail
+}
+
+if [ USERID -ne 0 ]
+then
+    echo "ERROR: please run with root access:
+    exit 1
+else
+    echo "INFO:: you have root access pls proceed"
+
+    
+## it is our responsibility to check success or not
+
+
 yum install mysql -y
-VALIDATE $? "installing MYSQL"
+VALIDATE $?
+# above we added the argument as $?
 
-   yum install postfix -y
+yum install postfix -y
 
-VALIDATE $? "installing postfix"
+VALIDATE $?
+#above we added argument as  $?
