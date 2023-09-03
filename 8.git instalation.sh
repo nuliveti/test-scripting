@@ -7,6 +7,7 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
     echo "error: please run with root access"
+    exit 1
 else
     echo "INFO: ur root user"
 fi
