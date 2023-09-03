@@ -34,3 +34,5 @@ yum install postfix -y
 
 VALIDATE $?
 ##### above we added argument as  $?
+
+
