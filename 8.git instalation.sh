@@ -11,5 +11,13 @@ then
 else
     echo "INFO: ur root user"
 fi
-
+## it is our responsibility to check success or not
 yum install git -y
+
+if [ $? -ne 0 ]
+then
+    echo "Installation of MYSQL SUCCESS"
+    exit 1
+else
+    echo "Installation of MYSQL FAILURE"
+fi
