@@ -21,8 +21,7 @@ then
     exit 1
 else
     echo "INFO:: you have root access pls proceed"
-
-
+fi
 ## it is our responsibility to check success or not
 
 
