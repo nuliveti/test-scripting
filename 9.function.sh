@@ -15,14 +15,14 @@ else
 fi
 }
 
-if [ USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then
     echo "ERROR: please run with root access:
     exit 1
 else
     echo "INFO:: you have root access pls proceed"
 
-    
+
 ## it is our responsibility to check success or not
 
 
