@@ -1,16 +1,16 @@
 #!/bin/bash
 #this script gola is to install mysql
 # if its have root then proceed else fail.or exist.
-DATE=$(date +%F-%H-%M-%S)
-LOGFILE=/tmp/
-SCRIPTNAME=
+DATE=$(date +%F)
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+SCRIPT_NAME=$0
 USERID=$(id -u)
 ##this function should validate previous command and inform user weather success or failure
 VALIDATE(){
     #here it will receive the argument1
     if [ $1 -ne 0 ]
 then
-    echo "$2 ---- FAILURE"
+    echo "$2 ---- FAILURE" 
     exit 1
 else
     echo "$2 ---- SUCCESS"
@@ -27,11 +27,11 @@ fi
 ## it is our responsibility to check success or not
 
 
-yum install mysql -y
+yum install mysql -y &>>$LOGFILE
 VALIDATE $?  " MYSQL INSTALLED"
 # above we added the argument as $? =$1 and second word we consider as $2
 
-yum install postfix -y
+yum install postfix -y &>>$LOGFILE
 
 VALIDATE $?  "POSTFIX INSTALLED"
 
