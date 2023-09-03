@@ -16,18 +16,18 @@ yum install git -y
 
 if [ $? -ne 0 ]
 then
-    echo "Installation of MYSQL SUCCESS"
+    echo "Installation of MYSQL FAILURE"
     exit 1
 else
-    echo "Installation of MYSQL FAILURE"
+    echo "Installation of MYSQL SUCCESS"
 fi
 
 yum install postfix -y
 
 if [ $? -ne 0 ]
 then
-    echo "Installation of postfix SUCCESS"
+    echo "Installation of postfix FAILURE"
     exit 1
 else
-    echo "Installation of postfix FAILURE"
+    echo "Installation of postfix SUCCESS"
 fi
