@@ -1,7 +1,9 @@
 #!/bin/bash
 #this script gola is to install mysql
 # if its have root then proceed else fail.or exist.
-
+DATE=$(date +%F-%H-%M-%S)
+LOGFILE=/tmp/
+SCRIPTNAME=
 USERID=$(id -u)
 ##this function should validate previous command and inform user weather success or failure
 VALIDATE(){
