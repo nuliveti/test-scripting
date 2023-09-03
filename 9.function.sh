@@ -28,7 +28,7 @@ then
     echo "ERROR: please run with root access"
     exit 1
 else
-    echo "INFO:: you have root access pls proceed"
+    ##echo "INFO:: you have root access pls proceed"
 fi
 ## it is our responsibility to check success or not
 
@@ -37,8 +37,8 @@ yum install mysql -y &>>$LOGFILE
 VALIDATE $?  " MYSQL INSTALLED"
 # above we added the argument as $? =$1 and second word we consider as $2
 
-yum install postfixXX -y &>>$LOGFILE
+yum install postfix -y &>>$LOGFILE
 
-VALIDATE $?  "POSTFIXxx INSTALLED"
+VALIDATE $?  "POSTFIX INSTALLED"
 
 
