@@ -37,8 +37,8 @@ yum install mysql -y &>>$LOGFILE
 VALIDATE $?  " MYSQL INSTALLED"
 # above we added the argument as $? =$1 and second word we consider as $2
 
-yum install postfix -y &>>$LOGFILE
+yum install postfixXX -y &>>$LOGFILE
 
-VALIDATE $?  "POSTFIX INSTALLED"
+VALIDATE $?  "POSTFIXxx INSTALLED"
 
 
