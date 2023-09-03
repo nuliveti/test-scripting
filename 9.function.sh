@@ -16,10 +16,10 @@ VALIDATE(){
     #here it will receive the argument1
     if [ $1 -ne 0 ]
 then
-    echo "$2 ----$B FAILURE $N" 
+    echo -e "$2 ----$B FAILURE $N" 
     exit 1
 else
-    echo "$2 ---- $P SUCCESS $N"
+    echo -e "$2 ---- $P SUCCESS $N"
 fi
 }
 
