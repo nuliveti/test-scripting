@@ -5,16 +5,21 @@ DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
+B="\e[36m"
+P="\e[35m"
+N="\e[0m"
+
+
 USERID=$(id -u)
 ##this function should validate previous command and inform user weather success or failure
 VALIDATE(){
     #here it will receive the argument1
     if [ $1 -ne 0 ]
 then
-    echo "$2 ---- FAILURE" 
+    echo "$2 ----$B FAILURE $N" 
     exit 1
 else
-    echo "$2 ---- SUCCESS"
+    echo "$2 ---- $P SUCCESS $N"
 fi
 }
 
