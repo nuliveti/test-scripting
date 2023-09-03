@@ -1,4 +1,5 @@
 #!/bin/bash
+### this variable is example for hardcode the variables like name = values and get the output
 
 echo "hellow world, iam learning devops with aws"
 
