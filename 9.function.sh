@@ -2,8 +2,9 @@
 #this script gola is to install mysql
 # if its have root then proceed else fail.or exist.
 DATE=$(date +%F)
-LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+
 USERID=$(id -u)
 ##this function should validate previous command and inform user weather success or failure
 VALIDATE(){
