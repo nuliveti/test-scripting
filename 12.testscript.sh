@@ -27,13 +27,13 @@ VALIDATE(){
     echo -e "$P Installing $2.....$P failure $N"
     exit 1
     else
-    echo -e "Installing $2......$Y SUCCESS $N"
+    echo -e "$P Installing $2......$Y SUCCESS $N"
     fi
 }
 for i in $@
 do 
    yum list installed $i &>>$LOGFILE
-   if [ $? -ne 0]
+   if [ $? -ne 0 ]
    then
        echo -e " $P $i is not installed, let's install it $N"
    yum install $i -y &>>$LOGFILE
@@ -42,6 +42,7 @@ do
        echo -e "$Y $i is already installed $N"
 
 fi
+
 done
 
 
