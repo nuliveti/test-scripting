@@ -13,14 +13,12 @@ Y="\e[33m"
 
 
 
-if [ $USERID -ne 0 ]{
+if [ $USERID -ne 0 ];
 
 then
 
-    echo -e "$B user dont have root privilege $N"
+    echo -e "$B ERROR: user dont have root privilege $N"
     exit 1
-
-}
 fi
 ### here im loopig all packages togeather
 VALIDATE(){
