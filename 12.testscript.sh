@@ -2,7 +2,7 @@
 
 #### im declaring all useful variavbles here
 USERID=$(id -u)
-DATE=&(date +%F)
+DATE=$(date +%F)
 LOGDIR=/home/centos/test-scripting/script_logs
 LOGFILE=$LOGDIR/$0-$DATE.log
 SCRIPT_NAME=$0
@@ -20,7 +20,7 @@ then
     echo -e "$B ERROR: user dont have root privilege $N"
     exit 1
 fi
-### here im loopig all packages togeather
+
 VALIDATE(){
     if [ $1 -ne 0];
     then
@@ -35,7 +35,7 @@ do
    yum list installed $i &>>$LOGFILE
    if [ $? -ne 0 ]
    then
-       echo -e " $P $i is not installed, let's install it $N"
+       echo -e "$i is not installed, let's install it!"
    yum install $i -y &>>$LOGFILE
    VALIDATE $? "$i"
    else
