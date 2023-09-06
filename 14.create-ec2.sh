@@ -14,7 +14,7 @@ do
    then
        INSTANCE_TYPE="t3.medium"
    else
-       INSTANCE_TYPE="t2.medium"
+       INSTANCE_TYPE="t2.micro"
     fi 
    echo "creating $i instance"
    IP_ADDRESS=$(aws ec2 run-instances --image-id $IMAGE_ID --instance-type $INSTANCE_TYPE --security-group-ids $SUCURYTY_GROUP_ID
